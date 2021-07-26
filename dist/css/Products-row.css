@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;900&display=swap');
+
+#admin-panel-products {
+    position: relative;
+}
+
+#admin-panel-products * {
+    font-family: Raleway;
+}
+
+#admin-panel-products h2 {
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 48px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+#admin-panel-products .table-products .table-products-header {
+    border-radius: 16px 16px 0 0;
+}
+
+#admin-panel-products .table-products .table-products-header {
+    background: #F5F5F5;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 28px;
+}
+
+#admin-panel-products .table-products .table-products-header div {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #666666;
+}
+
+#admin-panel-products .table-products .table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 28px;
+    border-bottom: 2px solid #F5F5F5;
+}
+
+#admin-panel-products .table-products .table-row div {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #1C1C1C;
+}
+
+#admin-panel-products .table-products-pagination {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+}
