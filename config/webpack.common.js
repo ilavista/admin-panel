@@ -1,6 +1,6 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 
 const paths = require('./paths')
 const {VueLoaderPlugin} = require("vue-loader");
@@ -35,14 +35,6 @@ module.exports = {
                     noErrorOnMissing: true,
                 },
             ],
-        }),
-
-        // Generates an HTML file from a template
-        // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
-        new HtmlWebpackPlugin({
-            title: 'iLavista admin-panel',
-            template: paths.src + '/template.html', // template file
-            filename: 'index.html', // output file
         }),
     ],
 

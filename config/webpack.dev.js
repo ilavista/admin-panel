@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { merge } = require('webpack-merge')
 
 const common = require('./webpack.common.js')
@@ -20,6 +21,16 @@ module.exports = merge(common, {
         hot: true,
         port: 8080,
     },
+
+    plugins: [
+        // Generates an HTML file from a template
+        // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
+        new HtmlWebpackPlugin({
+            title: 'iLavista admin-panel',
+            template: paths.src + '/template.html', // template file
+            filename: 'index.html', // output file
+        }),
+    ],
 
     module: {
         rules: [
