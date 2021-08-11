@@ -6,6 +6,10 @@ const paths = require('./paths')
 const common = require('./webpack.common.js')
 
 module.exports = merge(common, {
+
+    // Where webpack looks to start building the bundle
+    entry: [paths.src + '/js/index.js'],
+
     mode: 'production',
     devtool: false,
     output: {

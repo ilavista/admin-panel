@@ -6,8 +6,7 @@ const paths = require('./paths')
 const {VueLoaderPlugin} = require("vue-loader");
 
 module.exports = {
-    // Where webpack looks to start building the bundle
-    entry: [paths.src + '/js/index.js'],
+
 
     // Where webpack outputs the assets and bundles
     output: {
@@ -59,6 +58,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json'],
         alias: {
             '@': paths.src,
+            vue: 'vue/dist/vue.js'
         },
     },
 }

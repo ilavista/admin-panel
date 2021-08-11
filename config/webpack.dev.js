@@ -1,11 +1,14 @@
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { merge } = require('webpack-merge')
+const {merge} = require('webpack-merge')
 
 const common = require('./webpack.common.js')
 const paths = require('./paths')
 
 module.exports = merge(common, {
+    // Where webpack looks to start building the bundle
+    entry: [paths.src + '/js/test.js'],
+
     // Set the mode to development or production
     mode: 'development',
 
@@ -19,14 +22,14 @@ module.exports = merge(common, {
         open: true,
         compress: true,
         hot: true,
-        port: 8080,
+        port: 8085,
     },
 
     plugins: [
         // Generates an HTML file from a template
         // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
         new HtmlWebpackPlugin({
-            title: 'iLavista admin-panel',
+            title: 'ilavista admin-panel',
             template: paths.src + '/template.html', // template file
             filename: 'index.html', // output file
         }),
@@ -41,9 +44,9 @@ module.exports = merge(common, {
                     'style-loader',
                     {
                         loader: 'css-loader',
-                        options: { sourceMap: true, importLoaders: 1, modules: true },
+                        options: {sourceMap: true, importLoaders: 1, modules: true},
                     },
-                    { loader: 'sass-loader', options: { sourceMap: true } },
+                    {loader: 'sass-loader', options: {sourceMap: true}},
                 ],
             },
         ],

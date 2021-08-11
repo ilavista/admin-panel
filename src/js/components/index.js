@@ -1,4 +1,6 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 
-//** LeftMenu **//
-Vue.component('left-menu', require('./Left-menu.vue').default);
+//** LeftMenu **///
+// Vue.component('left-menu', require('./Left-menu.vue').default);
+
+
