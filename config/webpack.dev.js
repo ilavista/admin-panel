@@ -4,18 +4,15 @@ const {merge} = require('webpack-merge')
 
 const common = require('./webpack.common.js')
 const paths = require('./paths')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = merge(common, {
-    // Where webpack looks to start building the bundle
     entry: [paths.src + '/js/test.js'],
 
-    // Set the mode to development or production
     mode: 'development',
 
-    // Control how source maps are generated
     devtool: 'inline-source-map',
 
-    // Spin up a server for quick development
     devServer: {
         historyApiFallback: true,
         contentBase: paths.build,
@@ -26,8 +23,6 @@ module.exports = merge(common, {
     },
 
     plugins: [
-        // Generates an HTML file from a template
-        // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
         new HtmlWebpackPlugin({
             title: 'ilavista admin-panel',
             template: paths.src + '/template.html', // template file
@@ -37,11 +32,10 @@ module.exports = merge(common, {
 
     module: {
         rules: [
-            // Styles: Inject CSS into the head with source maps
             {
                 test: /\.(scss|css|sass)$/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
                         options: {sourceMap: true, importLoaders: 1, modules: true},
