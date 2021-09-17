@@ -1,15 +1,14 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-vue/dist/bootstrap-vue.min.css'
-
 import '../sass/index.sass'
 
-// require('./components');
-
-import TestComponent from "./components/TestComponent.vue";
+import LeftMenu from "./components/LeftMenu.vue";
+import Content from "./components/Content.vue";
+import TopRow from "./components/TopRow.vue";
 
 const iap = {
     install(Vue, options) {
-        Vue.component("hello-world", TestComponent);
+        Vue.component("iap-left-menu", LeftMenu);
+        Vue.component("iap-content", Content);
+        Vue.component("iap-top-row", TopRow);
     }
 };
 

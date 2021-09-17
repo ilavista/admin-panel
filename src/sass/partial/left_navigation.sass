@@ -1,0 +1,66 @@
+#ilavista-admin-panel-left-menu
+    position: fixed
+    width: 240px
+    left: 0
+    top: 0
+    height: 100%
+    border-radius: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    .top-box
+        width: 100%
+        position: absolute
+        top: 48px
+        text-align: center
+        padding: 0 24px 24px
+
+        span
+            display: inline-block
+            font-size: 16px
+            line-height: 18px
+            opacity: 0.8
+
+        img
+            display: block
+            margin: 0 auto 14px
+            max-width: 120px
+
+    .list-group-item
+        border-radius: 0
+        position: relative
+        border: none
+        padding-left: 24px
+
+        &::before
+            content: "."
+            display: block
+            position: absolute
+            left: -12px
+            transition: left ease-in-out 0.2s
+            top: 1px
+            font-size: 64px
+            line-height: 0
+            opacity: 0.2
+
+
+        &:hover
+            &::before
+                left: 1px
+
+        span
+            position: relative
+            transition: opacity ease-in-out 0.3s
+            opacity: 0.5
+
+
+
+    .router-link-exact-active
+
+        &::before
+            opacity: 1
+            left: 1px
+
+        span
+            opacity: 1

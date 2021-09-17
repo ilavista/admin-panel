@@ -38,7 +38,7 @@ module.exports = merge(common, {
                     MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
-                        options: {sourceMap: true, importLoaders: 1, modules: true},
+                        options: {sourceMap: true, importLoaders: 1, modules: false},
                     },
                     {loader: 'sass-loader', options: {sourceMap: true}},
                 ],
