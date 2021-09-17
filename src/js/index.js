@@ -4,7 +4,7 @@ import LeftMenu from "./components/LeftMenu.vue";
 import Content from "./components/Content.vue";
 import TopRow from "./components/TopRow.vue";
 
-const iap = {
+const ilavistaAdminPanel = {
     install(Vue, options) {
         Vue.component("iap-left-menu", LeftMenu);
         Vue.component("iap-content", Content);
@@ -14,7 +14,7 @@ const iap = {
 
 // Automatic installation if Vue has been added to the global scope.
 if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(iap);
+    window.Vue.use(ilavistaAdminPanel);
 }
 
-export default iap;
+export default ilavistaAdminPanel;

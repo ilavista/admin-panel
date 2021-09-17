@@ -1,6 +1,6 @@
 {
   "name": "@ilavista/admin-panel",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "new ilavista admin panel",
   "main": "dist/main.js",
   "scripts": {
